@@ -3,4 +3,117 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <?xml version="1.0" encoding="utf-8"?>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1"
+            android:padding="16dp">
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/nameLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name" />
+                <EditText
+                    android:id="@+id/nameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Pokémon name" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/genderLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender" />
+                <Spinner
+                    android:id="@+id/genderInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/hpLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HP" />
+                <EditText
+                    android:id="@+id/hpInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/attackLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Attack" />
+                <EditText
+                    android:id="@+id/attackInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/defenseLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Defense" />
+                <EditText
+                    android:id="@+id/defenseInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/heightLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Height (m)" />
+                <EditText
+                    android:id="@+id/heightInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/weightLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weight (kg)" />
+                <EditText
+                    android:id="@+id/weightInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+            </TableRow>
+
+            <TableRow>
+                <Button
+                    android:id="@+id/submitButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Submit" />
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

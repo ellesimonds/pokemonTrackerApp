@@ -24,10 +24,10 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        // setContentView(R.layout.activity_main);
 
         // Change this line depending on which layout you want to test:
-        // setContentView(R.layout.linear);
+         setContentView(R.layout.linear);
         // setContentView(R.layout.constraint);
         // setContentView(R.layout.table);
 
@@ -115,7 +115,9 @@ public class MainActivity extends Activity {
         }
 
         if (allValid) {
-            Toast.makeText(this, "Information stored in database", Toast.LENGTH_LONG).show();
+            String summary = "Name: " + name + "\nGender: " + gender + "\nHP: " + hpStr;
+            Toast.makeText(this, "Saved:\n" + summary, Toast.LENGTH_LONG).show();
+
         } else {
             Toast.makeText(this, "Some fields are invalid. Please fix highlighted fields.", Toast.LENGTH_LONG).show();
         }
