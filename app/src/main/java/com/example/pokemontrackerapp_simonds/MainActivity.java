@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
     EditText inputName, inputHp, inputAttack, inputDefense, inputHeight, inputWeight;
     Spinner inputGender;
     TextView labelName, labelGender, labelHp, labelAttack, labelDefense, labelHeight, labelWeight;
-    Button btnSubmit;
+    Button btnSubmit, btnReset;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -49,6 +49,8 @@ public class MainActivity extends Activity {
         labelWeight = findViewById(R.id.weightLabel);
 
         btnSubmit = findViewById(R.id.submitButton);
+        btnReset = findViewById(R.id.resetButton);
+        btnReset.setOnClickListener(v -> resetFields());
 
         // Setup Gender spinner
         ArrayAdapter<String> genderAdapter = new ArrayAdapter<>(
@@ -59,6 +61,25 @@ public class MainActivity extends Activity {
 
         btnSubmit.setOnClickListener(v -> validateInputs());
     }
+
+
+    private void resetFields() {
+        inputName.setText("Glastrier");
+        inputHp.setText("0");
+        inputAttack.setText("0");
+        inputDefense.setText("0");
+        inputHeight.setText("2.2");
+        inputWeight.setText("800.0");
+
+        // Optionally reset spinner (extra credit)
+        inputGender.setSelection(0); // back to "Select Gender"
+
+        // Reset label colors
+        resetLabelColors();
+
+        Toast.makeText(this, "Fields reset to default values", Toast.LENGTH_SHORT).show();
+    }
+
 
     private void validateInputs() {
         boolean allValid = true;
